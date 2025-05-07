@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
     <script src="//unpkg.com/alpinejs" defer></script>
-    <title>Document</title>
+    <title>Sistem Bioskop</title>
 </head>
 <body class="h-full">
     <div class="min-h-full">

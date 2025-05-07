@@ -3,14 +3,19 @@
         <div class="flex h-16 items-center justify-between">
         <div class="flex items-center">
             <div class="shrink-0">
-            <img class="size-8" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+            <img class="w-full h-[40px]" src="{{ asset('images/logo.png') }}">
             </div>
             <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <x-nav-link href='/dashboard' :active="request()->is('dashboard')">Dashboard</x-nav-link>
-                <x-nav-link href='/pengelolaan' :active="request()->is('pengelolaan')">Pengelolaan</x-nav-link>
-                <x-nav-link href='/profile' :active="request()->is('profile')">Profile</x-nav-link>
+                <div class="ml-10 flex items-baseline space-x-4">
+                    <x-nav-link href="{{ route('dashboard', ['username' => request()->query('username')]) }}" 
+                                :active="request()->is('dashboard')">Dashboard</x-nav-link>
+                    <x-nav-link href="{{ route('pengelolaan', ['username' => request()->query('username')]) }}" 
+                                :active="request()->is('pengelolaan')">Pengelolaan</x-nav-link>
+                    <x-nav-link href="{{ route('profile', ['username' => request()->query('username')]) }}" 
+                                :active="request()->is('profile')">Profile</x-nav-link>
+                </div>
             </div>
             </div>
         </div>
