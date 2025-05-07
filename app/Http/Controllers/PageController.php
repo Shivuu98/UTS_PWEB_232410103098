@@ -18,7 +18,6 @@ class PageController extends Controller
             'password' => 'required'
         ]);
     
-        // Redirect dengan username sebagai query parameter
         return redirect()->route('dashboard', ['username' => $request->username]);
     }
 
